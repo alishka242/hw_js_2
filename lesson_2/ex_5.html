@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+
+        let a = +prompt("Введите первое число:");
+        let b = +prompt("Введите второе число:");
+        let c = prompt("Введите знак, интересующего арифметического вычесления: ")
+
+        function sum(n, r) {
+            return n + r;
+        }
+
+        function subtraction(n, r) {
+            return n - r;
+        }
+
+        function division(n, r) {
+            return n / r;
+        }
+
+        function product_of_number(n, r) {
+            return n * r;
+        }
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case '+':
+                    return sum(arg1, arg2);
+                case '-':
+                    return subtraction(arg1, arg2);
+                case '/':
+                    return division(arg1, arg2);
+                case '*':
+                    return product_of_number(arg1, arg2);
+                default:
+                    throw new Error("Такая операция " + operation + " не предусмотрена");
+            }
+        }
+
+        alert (mathOperation (a, b, c));
+    </script>
+</body>
+
+</html>
